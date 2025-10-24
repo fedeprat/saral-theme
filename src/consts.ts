@@ -8,13 +8,9 @@ export const SITE_DESCRIPTION =
 // If you deploy to a subdirectory, set the `WEBSITE_BASE` here.
 // e.g. '/blog' if you are deploying to example.com/blog
 // Leave it as an empty string if you are deploying to a root domain (e.g. example.com)
-export const SITE_BASE = '/saral-theme-astro'
+export const SITE_BASE = ''
 
 export const SocialLinks = [
-	{
-		name: 'GitHub',
-		url: 'https://github.com/yashjawale',
-	},
 	{
 		name: 'LinkedIn',
 		url: 'https://www.linkedin.com/in/yashjawale/',
@@ -32,7 +28,7 @@ export const SocialLinks = [
 export const WebsiteLinks = [
 	{
 		name: 'Home',
-		url: '/',
+		url: '',
 	},
 	{
 		name: 'Blog',
@@ -43,3 +39,8 @@ export const WebsiteLinks = [
 		url: 'about',
 	},
 ]
+
+export const COPYRIGHT_NAME = 'All rights reserved.'
+
+export const ABOUT_ME =
+	'I am Federico Prat, a software developer and tech enthusiast who loves building web applications and exploring new technologies.'

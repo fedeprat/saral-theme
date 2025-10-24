@@ -26,6 +26,7 @@
 		"astro": "^5.13.7",
 		"astro-icon": "^1.1.0",
 		"dayjs": "^1.11.13",
+		"decap-cms-app": "^3.8.4",
 		"mdast-util-to-string": "^4.0.0",
 		"reading-time": "^1.5.0",
 		"rehype-figure-title": "^1.0.0",

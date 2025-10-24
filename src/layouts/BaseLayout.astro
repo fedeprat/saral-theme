@@ -29,5 +29,19 @@ import '@fontsource-variable/jetbrains-mono'
 		<Navbar title={SITE_TITLE} />
 		<slot />
 		<Footer />
+		<script>
+			if ((window as any).netlifyIdentity) {
+				;(window as any).netlifyIdentity.on(
+					'init',
+					(user: string | undefined) => {
+						if (!user) {
+							;(window as any).netlifyIdentity.on('login', () => {
+								document.location.href = '/admin/'
+							})
+						}
+					}
+				)
+			}
+		</script>
 	</body>
 </html>

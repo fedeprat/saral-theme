@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { SITE_BASE, SocialLinks } from '../consts'
+import { SITE_BASE, SocialLinks, ABOUT_ME } from '../consts'
 import { Icon } from 'astro-icon/components'
 import BlogCard from '../components/BlogCard.astro'
 import { getCollection } from 'astro:content'
@@ -53,8 +53,7 @@ const posts = (await getCollection('blog'))
 		<div class="space-y-6">
 			<h2 class="section-title">About Me</h2>
 			<p class="text-lg max-w-xl pb-4">
-				A brief introduction about yourself. You can include your profession,
-				hobbies, interests, or anything you'd like visitors to know about you.
+				{ABOUT_ME}
 			</p>
 			<a class="btn-secondary" href={`${SITE_BASE}/about`}
 				>Go to About
@@ -63,9 +62,6 @@ const posts = (await getCollection('blog'))
 		</div>
 		<div class="space-y-6">
 			<h2 class="section-title">Get in touch</h2>
-			<p class="text-lg max-w-xl">
-				Use the buttons below for my resume & email.
-			</p>
 			<div class="flex flex-wrap mt-auto space-x-4">
 				<a
 					class="btn-primary"
@@ -74,10 +70,6 @@ const posts = (await getCollection('blog'))
 					target="_blank"
 					>Get in touch
 					<Icon height={20} name="mdi:email" />
-				</a>
-				<a class="btn-secondary" href="https://example.com" target="_blank"
-					>Download Resume
-					<Icon height={20} name="mdi:arrow-collapse-down" />
 				</a>
 			</div>
 		</div>
